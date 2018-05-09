@@ -1,0 +1,25 @@
+.tabgroup {
+  margin-bottom: 35px;
+  min-height: 400px;
+}
+
+mat-divider{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headerrow {
+  text-align: left;
+}
+
+mat-grid-list{
+  min-height: 75px;
+}
+
+.inactive{
+  color: #ccc;
+}
+
+.veriIcon{
+  margin-top: 10px
+}

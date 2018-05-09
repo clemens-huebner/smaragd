@@ -1,0 +1,30 @@
+<mat-toolbar class="nav-header" color="primary">
+  <a routerLink="/">
+  <mat-icon svgIcon="smaragd" color="#FFF" class="nav-icon logo"></mat-icon>
+  <span>SMARAGD - Security Measures Automatable for Reliable AGile Development</span>
+  </a>
+  <span class="nav-spacer"></span>
+  <a routerLink="/background">
+    <button mat-icon-button>
+      <mat-icon class="nav-icon">help_outline</mat-icon>
+    </button>
+  </a>
+</mat-toolbar>
+
+<mat-sidenav-container class="nav-container">
+  <mat-sidenav #sidenav mode="side" opened="true" class="nav-sidenav" disableClose>
+
+    <app-weakness-list></app-weakness-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="nav-content">
+    <!-- <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p> !-->
+
+    <router-outlet></router-outlet>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

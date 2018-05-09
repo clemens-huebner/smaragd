@@ -1,0 +1,27 @@
+<div *ngIf="weakness">
+  <h2>CWE-{{weakness.ID}} {{weakness.Name}}</h2>
+
+ <p>{{weakness.Description}}</p>
+
+  <app-phase-chips [phases]="weakness.Phases"></app-phase-chips>
+
+  <h3>Possible measures</h3>
+  <div class="accordioncontainer">
+  <mat-accordion>
+
+    <mat-expansion-panel *ngFor="let measure of measures">
+      <mat-expansion-panel-header>
+        <h4>M-{{measure.ID}} {{measure.Name}}</h4>
+      </mat-expansion-panel-header>
+      <app-phase-chips [phases]="measure.Phases"></app-phase-chips>
+      <p>Type: {{measure.Type}}</p>
+      <p>{{measure.Description}}</p>
+      <a routerLink="/measure/{{measure.ID}}">See details...
+      </a>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+  </div>
+
+</div>

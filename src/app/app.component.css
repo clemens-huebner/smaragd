@@ -1,0 +1,38 @@
+.nav-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.nav-content{
+
+  padding: 1%;
+}
+
+.nav-sidenav {
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-icon {
+  padding: 0 14px;
+}
+
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+
+a:link { text-decoration: none; color: white; }
+a { text-decoration: none;  color: white;}
+a:hover { text-decoration: underline;  color: white;}

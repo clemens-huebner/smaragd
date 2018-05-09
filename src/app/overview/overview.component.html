@@ -1,0 +1,19 @@
+<h2>Overview</h2>
+
+<mat-accordion *ngIf="owasps">
+
+  <mat-expansion-panel *ngFor="let owasp of owasps">
+    <mat-expansion-panel-header>
+      <h4>{{owasp.ID}} {{owasp.Name}}</h4>
+    </mat-expansion-panel-header>
+    <mat-list class="agileactionlist">
+        <mat-list-item *ngFor="let weakness of owasp.Weaknesses">
+          <a routerLink="/weakness/{{weakness}}">
+            <p>CWE-{{weakness}}  {{getWeakness(weakness).Name}}</p>
+          </a>
+        </mat-list-item>
+    </mat-list>
+
+  </mat-expansion-panel>
+
+</mat-accordion>

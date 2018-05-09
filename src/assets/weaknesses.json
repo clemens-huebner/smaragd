@@ -1,0 +1,380 @@
+{
+  "5": {
+    "Shortname": "J2EE: No Encrypted Transmission ",
+    "Name": "J2EE Misconfiguration: Data Transmission Without Encryption",
+    "Comment": "Category J2EE Environment Issues",
+    "Description": "Information sent over a network can be compromised while in transit. An attacker may be able toread or modify the contents if the data are sent in plaintext or are weakly encrypted.",
+    "Source": "CWE"
+  },
+  "6": {
+    "Shortname": "J2EE: Insufficient Session-ID Length",
+    "Name": "J2EE Misconfiguration: Insufficient Session-ID Length",
+    "Comment": "Category J2EE Environment Issues",
+    "Description": "The J2EE application is configured to use an insufficient session ID length.",
+    "Source": "CWE"
+  },
+  "7": {
+    "Shortname": "J2EE: Missing Custom Error Page",
+    "Name": "J2EE Misconfiguration: Missing Custom Error Page",
+    "Comment": "Category J2EE Environment Issues",
+    "Description": "The default error page of a web application should not display sensitive information about thesoftware system.",
+    "Source": "CWE"
+  },
+  "8": {
+    "Shortname": "J2EE: Entity Bean Declared Remote",
+    "Name": "J2EE Misconfiguration: Entity Bean Declared Remote",
+    "Comment": "Category J2EE Environment Issues",
+    "Description": "When an application exposes a remote interface for an entity bean, it might also expose methodsthat get or set the bean's data. These methods could be leveraged to read sensitive information,or to change data in ways that violate the application's expectations, potentially leading to othervulnerabilities.",
+    "Source": "CWE"
+  },
+  "9": {
+    "Shortname": "J2EE: EJB Method Permissions",
+    "Name": "J2EE Misconfiguration: Weak Access Permissions for EJB Methods",
+    "Comment": "Category J2EE Environment Issues",
+    "Description": "If elevated access rights are assigned to EJB methods, then an attacker can take advantage of thepermissions to exploit the software system.",
+    "Source": "CWE"
+  },
+  "11": {
+    "Shortname": "ASP.NET: Debug Binary",
+    "Name": "ASP.NET Misconfiguration: Creating Debug Binary",
+    "Comment": "Category .NET Environment",
+    "Description": "Debugging messages help attackers learn about the system and plan a form of attack.",
+    "Source": "CWE"
+  },
+  "12": {
+    "Shortname": "ASP.NET: Missing Custom Error Page",
+    "Name": "ASP.NET Misconfiguration: Missing Custom Error Page",
+    "Comment": "Category .NET Environment",
+    "Description": "An ASP .NET application must enable custom error pages in order to prevent attackers from mininginformation from the framework's built-in responses.",
+    "Source": "CWE"
+  },
+  "13": {
+    "Shortname": "ASP.NET: Password in Config",
+    "Name": "ASP.NET Misconfiguration: Password in Configuration File",
+    "Comment": "Category .NET Environment",
+    "Description": "Storing a plaintext password in a configuration file allows anyone who can read the file access tothe password-protected resource making them an easy target for attackers.",
+    "Source": "CWE"
+  },
+  "14": {
+    "Shortname": "Buffer Clear Code",
+    "Name": "Compiler Removal of Code to Clear Buffers",
+    "Comment": "",
+    "Description": "Sensitive memory is cleared according to the source code, but compiler optimizations leave the memory untouched when it is not read from again, aka \"dead store removal.\"",
+    "Source": "CWE"
+  },
+  "22": {
+    "Shortname": "Path Traversal",
+    "Name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+    "Comment": "",
+    "Description": "The software uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the software does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory.",
+    "Source": "CWE"
+  },
+  "77": {
+    "Shortname": "Command Injection",
+    "Name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+    "Comment": "",
+    "Description": "The software constructs all or part of a command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended command when it is sent to a downstream component.",
+    "Source": "CWE"
+  },
+  "78": {
+    "Shortname": "OS Command Injection",
+    "Name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+    "Comment": "",
+    "Description": "The software constructs all or part of an OS command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended OS command when it is sent to a downstream component.",
+    "Source": "CWE"
+  },
+  "79": {
+    "Shortname": "Cross-site Scripting",
+    "Name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+    "Comment": "",
+    "Description": "The software does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+    "Source": "CWE"
+  },
+  "88": {
+    "Shortname": "Argument Injection",
+    "Name": "Argument Injection or Modification",
+    "Comment": "",
+    "Description": "The software does not sufficiently delimit the arguments being passed to a component in another control sphere, allowing alternate arguments to be provided, leading to potentially security-relevant changes.",
+    "Source": "CWE"
+  },
+  "89": {
+    "Shortname": "SQL Injection",
+    "Name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "Comment": "",
+    "Description": "The software constructs all or part of an SQL command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended SQL command when it is sent to a downstream component.",
+    "Source": "CWE"
+  },
+  "90": {
+    "Shortname": "LDAP Injection",
+    "Name": "Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')",
+    "Comment": "",
+    "Description": "The software constructs all or part of an LDAP query using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended LDAP query when it is sent to a downstream component.",
+    "Source": "CWE"
+  },
+  "91": {
+    "Shortname": "XPath Injection",
+    "Name": "XML Injection (aka Blind XPath Injection)",
+    "Comment": "",
+    "Description": "The software does not properly neutralize special elements that are used in XML, allowing attackers to modify the syntax, content, or commands of the XML before it is processed by an end system.",
+    "Source": "CWE"
+  },
+  "99": {
+    "Shortname": "Resource Injection",
+    "Name": "Improper Control of Resource Identifiers ('Resource Injection')",
+    "Comment": "",
+    "Description": "The software receives input from an upstream component, but it does not restrict or incorrectly restricts the input before it is used as an identifier for a resource that may be outside the intended sphere of control.",
+    "Source": "CWE"
+  },
+  "209": {
+    "Shortname": "Error Message Exposure",
+    "Name": "Information Exposure Through an Error Message",
+    "Comment": "",
+    "Description": "The software generates an error message that includes sensitive information about its environment, users, or associated data.",
+    "Source": "CWE"
+  },
+  "215": {
+    "Shortname": "Debug Info Exposure",
+    "Name": "Information Exposure Through Debug Information",
+    "Comment": "",
+    "Description": "The application contains debugging code that can expose sensitive information to untrusted parties.",
+    "Source": "CWE"
+  },
+  "256": {
+    "Shortname": "Plaintext Password",
+    "Name": "Plaintext Storage of a Password",
+    "Comment": "",
+    "Description": "Storing a password in plaintext may result in a system compromise.",
+    "Source": "CWE"
+  },
+  "285": {
+    "Shortname": "Improper Authorization",
+    "Name": "Improper Authorization",
+    "Comment": "",
+    "Description": "The software does not perform or incorrectly performs an authorization check when an actor attempts to access a resource or perform an action.",
+    "Source": "CWE"
+  },
+  "287": {
+    "Shortname": "Improper Authentication",
+    "Name": "Improper Authentication",
+    "Comment": "",
+    "Description": "When an actor claims to have a given identity, the software does not prove or insufficiently proves that the claim is correct.",
+    "Source": "CWE"
+  },
+  "295": {
+    "Shortname": "Improper Certificate Validation",
+    "Name": "Improper Certificate Validation",
+    "Comment": "",
+    "Description": "The software does not validate, or incorrectly validates, a certificate.",
+    "Source": "CWE"
+  },
+  "311": {
+    "Shortname": "Missing Encryption",
+    "Name": "Missing Encryption of Sensitive Data",
+    "Comment": "",
+    "Description": "The software does not encrypt sensitive or critical information before storage or transmission.",
+    "Source": "CWE"
+  },
+  "312": {
+    "Shortname": "Cleartext Storage",
+    "Name": "Cleartext Storage of Sensitive Information",
+    "Comment": "",
+    "Description": "The application stores sensitive information in cleartext within a resource that might be accessible to another control sphere.",
+    "Source": "CWE"
+  },
+  "319": {
+    "Shortname": "Cleartext Transmission",
+    "Name": "Cleartext Transmission of Sensitive Information",
+    "Comment": "",
+    "Description": "The software transmits sensitive or security-critical data in cleartext in a communication channel that can be sniffed by unauthorized actors.",
+    "Source": "CWE"
+  },
+  "321": {
+    "Shortname": "Hard-coded Keys",
+    "Name": "Use of Hard-coded Cryptographic Key",
+    "Comment": "",
+    "Description": "The use of a hard-coded cryptographic key significantly increases the possibility that encrypted data may be recovered.",
+    "Source": "CWE"
+  },
+  "322": {
+    "Shortname": "Unauthenticated Key Exchange",
+    "Name": "Key Exchange without Entity Authentication",
+    "Comment": "",
+    "Description": "The software performs a key exchange with an actor without verifying the identity of that actor.",
+    "Source": "CWE"
+  },
+  "323": {
+    "Shortname": "Reusing Nonce",
+    "Name": "Reusing a Nonce, Key Pair in Encryption",
+    "Comment": "",
+    "Description": "Nonces should be used for the present occasion and only once.",
+    "Source": "CWE"
+  },
+  "324": {
+    "Shortname": "Using Expired Key",
+    "Name": "Use of a Key Past its Expiration Date",
+    "Comment": "",
+    "Description": "The product uses a cryptographic key or password past its expiration date, which diminishes its safety significantly by increasing the timing window for cracking attacks against that key.",
+    "Source": "CWE"
+  },
+  "325": {
+    "Shortname": "Missing Cryptographic Steps",
+    "Name": "Missing Required Cryptographic Step",
+    "Comment": "",
+    "Description": "The software does not implement a required step in a cryptographic algorithm, resulting in weaker encryption than advertised by that algorithm.",
+    "Source": "CWE"
+  },
+  "326": {
+    "Shortname": "Weak Encryption",
+    "Name": "Inadequate Encryption Strength",
+    "Comment": "",
+    "Description": "The software stores or transmits sensitive data using an encryption scheme that is theoretically sound, but is not strong enough for the level of protection required.",
+    "Source": "CWE"
+  },
+  "327": {
+    "Shortname": "Risky Cryptography",
+    "Name": "Use of a Broken or Risky Cryptographic Algorithm",
+    "Comment": "",
+    "Description": "The use of a broken or risky cryptographic algorithm is an unnecessary risk that may result in the exposure of sensitive information.",
+    "Source": "CWE"
+  },
+  "328": {
+    "Shortname": "Reversible Hash",
+    "Name": "Reversible One-Way Hash",
+    "Comment": "",
+    "Description": "The product uses a hashing algorithm that produces a hash value that can be used to determine the original input, or to find an input that can produce the same hash, more efficiently than brute force techniques.",
+    "Source": "CWE"
+  },
+  "329": {
+    "Shortname": "No Random IV",
+    "Name": "Not Using a Random IV with CBC Mode",
+    "Comment": "",
+    "Description": "Not using a random initialization Vector (IV) with Cipher Block Chaining (CBC) Mode causes algorithms to be susceptible to dictionary attacks.",
+    "Source": "CWE"
+  },
+  "347": {
+    "Shortname": "Improper Signature Verification",
+    "Name": "Improper Verification of Cryptographic Signature",
+    "Comment": "",
+    "Description": "The software does not verify, or incorrectly verifies, the cryptographic signature for data.",
+    "Source": "CWE"
+  },
+  "352": {
+    "Shortname": "CSRF",
+    "Name": "Cross-Site Request Forgery (CSRF)",
+    "Comment": "",
+    "Description": "The web application does not, or can not, sufficiently verify whether a well-formed, valid, consistent request was intentionally provided by the user who submitted the request.",
+    "Source": "CWE"
+  },
+  "384": {
+    "Shortname": "Session Fixation",
+    "Name": "Session Fixation",
+    "Comment": "",
+    "Description": "Authenticating a user, or otherwise establishing a new user session, without invalidating any existing session identifier gives an attacker the opportunity to steal authenticated sessions.",
+    "Source": "CWE"
+  },
+  "435": {
+    "Shortname": "Improper Entity Interaction",
+    "Name": "Improper Interaction Between Multiple Entities",
+    "Comment": "",
+    "Description": "The software does not sufficiently verify the origin or authenticity of data, in a way that causes it to accept invalid data.",
+    "Source": "CWE"
+  },
+  "520": {
+    "Shortname": ".NET: Impersonation",
+    "Name": ".NET Misconfiguration: Use of Impersonation",
+    "Comment": "Category .NET Environment",
+    "Description": "Allowing a .NET application to run at potentially escalated levels of access to the underlyingoperating and file systems can be dangerous and result in various forms of attacks.",
+    "Source": "CWE"
+  },
+  "522": {
+    "Shortname": "Insufficiently Protected Credentials",
+    "Name": "Insufficiently Protected Credentials",
+    "Comment": "",
+    "Description": "This weakness occurs when the application transmits or stores authentication credentials and uses an insecure method that is susceptible to unauthorized interception and/or retrieval.",
+    "Source": "CWE"
+  },
+  "523": {
+    "Shortname": "Unprotected Transport of Credentials",
+    "Name": "Unprotected Transport of Credentials",
+    "Comment": "",
+    "Description": "Login pages not using adequate measures to protect the user name and password while they are in transit from the client to the server.",
+    "Source": "CWE"
+  },
+  "548": {
+    "Shortname": "Directory Listing Exposure",
+    "Name": "Information Exposure Through Directory Listing",
+    "Comment": "",
+    "Description": "A directory listing is inappropriately exposed, yielding potentially sensitive information to attackers.",
+    "Source": "CWE"
+  },
+  "554": {
+    "Shortname": "ASP.NET: No Input Validation",
+    "Name": "ASP.NET Misconfiguration: Not Using Input Validation Framework",
+    "Comment": "Category .NET Environment",
+    "Description": "The ASP.NET application does not use an input validation framework.",
+    "Source": "CWE"
+  },
+  "555": {
+    "Shortname": "J2EE: Plaintext Password",
+    "Name": "J2EE Misconfiguration: Plaintext Password in Configuration File",
+    "Comment": "Category J2EE Environment Issues",
+    "Description": "The J2EE application stores a plaintext password in a configuration file.",
+    "Source": "CWE"
+  },
+  "556": {
+    "Shortname": "ASP.NET: Identity Impersonation",
+    "Name": "ASP.NET Misconfiguration: Use of Identity Impersonation",
+    "Comment": "Category .NET Environment",
+    "Description": "Configuring an ASP.NET application to run with impersonated credentials may give the applicationunnecessary privileges.",
+    "Source": "CWE"
+  },
+  "601": {
+    "Shortname": "Open Redirect",
+    "Name": "URL Redirection to Untrusted Site ('Open Redirect')",
+    "Comment": "",
+    "Description": "A web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a Redirect. This simplifies phishing attacks.",
+    "Source": "CWE"
+  },
+  "613": {
+    "Shortname": "Insufficient Session Expiration",
+    "Name": "Insufficient Session Expiration",
+    "Comment": "",
+    "Description": "According to WASC, Insufficient Session Expiration is when a web site permits an attacker to reuse old session credentials or session IDs for authorization.",
+    "Source": "CWE"
+  },
+  "620": {
+    "Shortname": "Unverified Password Change",
+    "Name": "Unverified Password Change",
+    "Comment": "",
+    "Description": "When setting a new password for a user, the product does not require knowledge of the original password, or using another form of authentication.",
+    "Source": "CWE"
+  },
+  "639": {
+    "Shortname": "Authorization Bypass",
+    "Name": "Authorization Bypass Through User-Controlled Key",
+    "Comment": "",
+    "Description": "The system's authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value identifying the data.",
+    "Source": "CWE"
+  },
+  "640": {
+    "Shortname": "Weak Password Recovery ",
+    "Name": "Weak Password Recovery Mechanism for Forgotten Password",
+    "Comment": "",
+    "Description": "The software contains a mechanism for users to recover or change their passwords without knowing the original password, but the mechanism is weak.",
+    "Source": "CWE"
+  },
+  "780": {
+    "Shortname": "RSA without OAEP",
+    "Name": "Use of RSA Algorithm without OAEP",
+    "Comment": "",
+    "Description": "The software uses the RSA algorithm but does not incorporate Optimal Asymmetric Encryption Padding (OAEP), which might weaken the encryption.",
+    "Source": "CWE"
+  },
+  "937": {
+    "Shortname": "Components with Known Vulnerabilities",
+    "Name": "Using Components with Known Vulnerabilities",
+    "Comment": "Mock CWE, as not suitable to CWE concept",
+    "Description": "Mock CWE, as not suitable to CWE concept. It is numbered in compliance with the CWE for the category containing the weaknesses related to this OWASP risk.",
+    "Source": "CWE"
+  }
+}

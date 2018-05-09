@@ -1,0 +1,106 @@
+<h2>M-{{measure.ID}} {{measure.Name}}</h2>
+<p>{{measure.Description}}</p>
+
+
+<app-phase-chips [phases]="measure.Phases"></app-phase-chips>
+<p>Type: {{measure.Type}}</p>
+
+
+<mat-tab-group class="tabgroup">
+  <mat-tab label="Agile actions" class="tab">
+    <mat-list class="agileactionlist">
+      <mat-divider>
+      </mat-divider>
+      <mat-list-item style="height: 100%">
+        {{measure.Agility | sanitizeLinks}}
+      </mat-list-item>
+      <mat-divider>
+      </mat-divider>
+      <mat-list-item>
+        <mat-icon matListIcon>looks_one</mat-icon>
+        <h3 matLine> One-time actions </h3>
+        <p matLine>
+          <span *ngIf="measure.ActionOT"> {{measure.ActionOT}} </span>
+          <span *ngIf="!measure.ActionOT"> - </span>
+        </p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>list</mat-icon>
+        <h3 matLine> Action per increment </h3>
+        <p matLine>
+          <span *ngIf="measure.ActionPI"> {{measure.ActionPI}} </span>
+          <span *ngIf="!measure.ActionPI"> - </span>
+        </p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>cached</mat-icon>
+        <h3 matLine> Continuous action </h3>
+        <p matLine>
+          <span *ngIf="measure.ActionCo"> {{measure.ActionCo}} </span>
+          <span *ngIf="!measure.ActionCo"> - </span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+
+  </mat-tab>
+
+
+  <mat-tab label="Automatic verification" class="tab">
+    <mat-list class="agileactionlist">
+      <mat-divider>
+      </mat-divider>
+      <mat-list-item *ngFor="let verificationDescription of measure.VerificationArray">
+        {{verificationDescription}}
+      </mat-list-item>
+      <mat-divider>
+      </mat-divider>
+    </mat-list>
+
+    <mat-grid-list cols="10" rowHeight="30px" gutterSize="-10" [ngClass]="{inactive: !measure.ActionOT}">
+      <mat-grid-tile colspan="2" rowspan="2">One-time actions</mat-grid-tile>
+      <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">{{vericat}}
+      </mat-grid-tile>
+      <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">
+        <span *ngIf="!measure.ActionOT">-</span>
+        <span *ngIf="measure.ActionOT" matTooltip="{{measure[vericat+'_OT'] | automationDegree}}" ><mat-icon class="veriIcon">{{measure[vericat + "_OT"] | automationDegreeIcon}}</mat-icon></span>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="10" rowHeight="30px" gutterSize="-10" [ngClass]="{inactive: !measure.ActionPI}">
+      <mat-grid-tile colspan="2" rowspan="2">Action per increment</mat-grid-tile>
+      <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">{{vericat}}
+      </mat-grid-tile>
+      <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">
+        <span *ngIf="!measure.ActionPI">-</span>
+        <span *ngIf="measure.ActionPI" matTooltip="{{measure[vericat+'_PI'] | automationDegree}}" ><mat-icon class="veriIcon">{{measure[vericat + "_PI"] | automationDegreeIcon}}</mat-icon></span>
+        {{measure[vericat+"PI"] | automationDegreeIcon}}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="10" rowHeight="30px" gutterSize="-10" [ngClass]="{inactive: !measure.ActionCo}">
+      <mat-grid-tile colspan="2" rowspan="2">Continuous action</mat-grid-tile>
+      <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">{{vericat}}
+      </mat-grid-tile>
+      <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">
+        <span *ngIf="!measure.ActionCo">-</span>
+        <span *ngIf="measure.ActionCo" matTooltip="{{measure[vericat+'_Co'] | automationDegree}}" ><mat-icon class="veriIcon">{{measure[vericat + "_Co"] | automationDegreeIcon}}</mat-icon></span>
+        {{measure[vericat+"_Co"] | automationDegreeIcon}}
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-tab>
+
+
+  <mat-tab label="Affected Weaknesses" class="tab">
+    <mat-list role="list">
+      <p *ngFor="let weakness of weaknesses">
+        <a routerLink="/weakness/{{weakness.ID}}">
+          <mat-list-item role="listitem">
+            CWE-{{weakness.ID}} {{weakness.Name}}
+          </mat-list-item>
+        </a>
+        <mat-divider></mat-divider>
+      </p>
+    </mat-list>
+    <p *ngFor="let weakness of weaknesses">
+  </mat-tab>
+</mat-tab-group>

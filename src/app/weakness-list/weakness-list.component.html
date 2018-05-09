@@ -1,0 +1,26 @@
+<div class="listsettings">
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle disabled value="bold">Mapping:</mat-button-toggle>
+    <mat-button-toggle value="bold">OWASP Top Ten 2017</mat-button-toggle>
+    <mat-button-toggle value="italic">no Mapping</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search..." [value]="searchstring"
+           (input)="searchstring = $event.target.value; filterWeaknesses()">
+    <button mat-button *ngIf="searchstring" matSuffix mat-icon-button (click)="searchstring=''; filterWeaknesses()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<mat-list role="list" [disableRipple]="false">
+  <div *ngFor="let weakness of searchresults">
+    <mat-divider></mat-divider>
+    <a routerLink="/weakness/{{weakness.ID}}">
+      <mat-list-item role="listitem" [class.isSelected]="weakness === selectedWeakness" (click)="onSelect(weakness)">
+
+        CWE-{{weakness.ID}} {{weakness.Shortname}}
+      </mat-list-item>
+    </a>
+  </div>
+</mat-list>
