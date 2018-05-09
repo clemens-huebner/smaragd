@@ -10,6 +10,6 @@ To allow an easier use of the results in development projects, this web applicat
 ##  Installation
 
 Node.js and npm required.
-Run the tool locally with `npm start` and open `localhost:4200` in your browser.
+Install needed dependencies with `npm install`, then run the tool locally with `npm start` and open `localhost:4200` in your browser.
 
 Use `nmp build` to create a deployable package.
