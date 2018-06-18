@@ -73,7 +73,6 @@
       <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">
         <span *ngIf="!measure.ActionPI">-</span>
         <span *ngIf="measure.ActionPI" matTooltip="{{measure[vericat+'_PI'] | automationDegree}}" ><mat-icon class="veriIcon">{{measure[vericat + "_PI"] | automationDegreeIcon}}</mat-icon></span>
-        {{measure[vericat+"PI"] | automationDegreeIcon}}
       </mat-grid-tile>
     </mat-grid-list>
 
@@ -84,7 +83,6 @@
       <mat-grid-tile *ngFor="let vericat of ['MAR', 'ACA', 'MCR', 'AVS', 'MPT', 'CAT', 'ADC', 'MOC']">
         <span *ngIf="!measure.ActionCo">-</span>
         <span *ngIf="measure.ActionCo" matTooltip="{{measure[vericat+'_Co'] | automationDegree}}" ><mat-icon class="veriIcon">{{measure[vericat + "_Co"] | automationDegreeIcon}}</mat-icon></span>
-        {{measure[vericat+"_Co"] | automationDegreeIcon}}
       </mat-grid-tile>
     </mat-grid-list>
   </mat-tab>
