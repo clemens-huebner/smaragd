@@ -13,3 +13,5 @@ Node.js and npm required.
 Install needed dependencies with `npm install`, then run the tool locally with `npm start` and open `localhost:4200` in your browser.
 
 Use `nmp build` to create a deployable package.
+
+It is also possible to use the Dockerfile to create a docker image.
