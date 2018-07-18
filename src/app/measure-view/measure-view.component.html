@@ -6,7 +6,7 @@
 <p>Type: {{measure.Type}}</p>
 
 
-<mat-tab-group class="tabgroup">
+<mat-tab-group class="tabgroup" [selectedIndex]="selected.value" (selectedIndexChange)="saveSelected($event)">
   <mat-tab label="Agile actions" class="tab">
     <mat-list class="agileactionlist">
       <mat-divider>
