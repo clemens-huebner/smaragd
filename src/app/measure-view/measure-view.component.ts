@@ -23,6 +23,9 @@ export class MeasureViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMeasure();
+    this.route.fragment.subscribe((fragment: string) => {
+        this.selected.setValue(fragment);
+    })
   }
 
   getMeasure(): void {
@@ -34,6 +37,7 @@ export class MeasureViewComponent implements OnInit {
 
   saveSelected($event): void {
       this.selected.setValue($event);
+      this.location.replaceState(this.location.path() + "#" + $event)
   }
 
 }
